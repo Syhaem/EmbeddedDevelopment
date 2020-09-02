@@ -1,6 +1,8 @@
 # Embedded Development
 
-前言：用于嵌入式知识积累
+前言：
 
-目录
+目录：
+
+[i2c](./Hardware/通信接口/I2C.md)
 
