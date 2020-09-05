@@ -57,7 +57,7 @@ RTOS的内核通常会有：调度器、对象、服务。
 ​		Task2 会一直运行直到遇到系统阻塞式的 API 函数，比如延迟，事件标志等待，信号量等待， Task2任务会被挂起，继而执行就绪列表中下一个最高优先级的任务。
 ​		如果用户创建了多个任务并且采用抢占式调度器的话，基本都是按照上面两条来执行。 根据抢占式调度器，当前的任务要么被高优先级任务抢占，要么通过调用阻塞式 API 来释放 CPU 使用权让低优先级任务执行，没有用户任务执行时就执行空闲任务。
 
-![](https://github.com/Syhaem/EmbeddedDevelopment/tree/master/Software/3.RTOS/resource/20190326110455632.png)
+![image](https://github.com/Syhaem/EmbeddedDevelopment/tree/master/Software/3.RTOS/resource/20190326110455632.png)
 
 ![](.\resource\20190326110455632.png)
 
@@ -76,6 +76,8 @@ RTOS的内核通常会有：调度器、对象、服务。
 - 时间片
 
 ​        在小型的嵌入式 RTOS 中，最常用的的时间片调度算法就是 Round-robin 调度算法。这种调度算法可以用于抢占式或者合作式的多任务中。另外，时间片调度适合用于不要求任务实时响应的情况。实现 Round-robin 调度算法需要给同优先级的任务分配一个专门的列表，用于记录当前就绪的任务，并为每个任务分配一个时间片（也就是需要运行的时间长度，时间片用完了就进行任务切换）。
+
+![image](https://github.com/Syhaem/EmbeddedDevelopment/tree/master/Software/3.RTOS/resource/20190326114354395.png)
 
 ![](.\resource\20190326114354395.png)
 
